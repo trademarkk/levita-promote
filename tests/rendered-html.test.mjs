@@ -31,7 +31,7 @@ test("server-renders the LEVITA promoter course", async () => {
   const html = await response.text();
   assert.match(html, /<title>Обучение промоутера LEVITA<\/title>/i);
   assert.match(html, /Первая смена/);
-  assert.match(html, /Бесплатно/);
+  assert.match(html, /2 занятия/);
   assert.match(html, /женский фитнес-клуб/);
   assert.match(html, /Шпаргалка PDF/);
   assert.match(html, /Соцопрос/);
@@ -64,7 +64,7 @@ test("keeps the business and test rules in the source", async () => {
   assert.match(page, /Клиентка самостоятельно вводит данные/);
   assert.match(page, /пять вопросов, около двух минут/i);
   assert.match(page, /levita-promoter-test-v4/);
-  assert.match(page, /первое пробное занятие бесплатно/i);
+  assert.match(page, /сертификату для Вас.*2 групповых занятия/i);
   assert.doesNotMatch(page, /lead-form-example\.png|личной лид-форме/i);
   assert.doesNotMatch(page, /Личной формы больше нет/);
   assert.doesNotMatch(page, /199\s*₽|(?<!бес)платное пробное/i);
