@@ -62,9 +62,9 @@ test("keeps the business and test rules in the source", async () => {
   assert.match(page, /Бывшая клиентка считается оплачиваемым лидом/);
   assert.match(page, /Листовка продолжает заинтересованный разговор/);
   assert.match(page, /Клиентка самостоятельно вводит данные/);
-  assert.match(page, /пять вопросов, около двух минут/i);
+  assert.match(page, /около двух минут и пять коротких вопросов/i);
   assert.match(page, /levita-promoter-test-v4/);
-  assert.match(page, /сертификату для Вас.*2 групповых занятия/i);
+  assert.match(page, /сертификату для Вас.*2 бесплатных групповых занятия/i);
   assert.doesNotMatch(page, /lead-form-example\.png|личной лид-форме/i);
   assert.doesNotMatch(page, /Личной формы больше нет/);
   assert.doesNotMatch(page, /199\s*₽|(?<!бес)платное пробное/i);
