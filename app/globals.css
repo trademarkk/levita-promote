@@ -382,14 +382,14 @@ mark {
 .leaflet-decisions .yes strong { color: var(--gold); }
 .leaflet-decisions .no strong { color: #e0a7a7; }
 .leaflet-decisions span { color: rgba(255,255,255,.7); font-size: 13px; line-height: 1.45; }
-.lead-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 38px 0; }
+.lead-methods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 38px 0; }
 .lead-method { display: flex; flex-direction: column; gap: 13px; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--white); }
 .lead-method.featured { border-color: var(--gold); box-shadow: 0 12px 28px rgba(16,26,37,.08); }
 .lead-method h2 { margin: 0; font-size: 28px; line-height: 1.1; }
 .lead-method p { margin: 0; color: var(--ink-muted); font-size: 14px; line-height: 1.52; }
 .lead-method img { width: 100%; max-height: 320px; object-fit: contain; border-radius: var(--radius-control); background: var(--paper); }
 .lead-method small { margin-top: auto; color: var(--ink-muted); line-height: 1.45; }
-.studio-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; margin: 14px 0 0; padding: 0; list-style: none; }
+.studio-list { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
 .studio-list li::before { content: "•"; margin-right: 7px; color: #9a7615; }
 .privacy-note { padding: 25px; border: 1px solid var(--gold); border-radius: var(--radius-card); background: var(--white); }
 .privacy-note strong { display: block; margin-bottom: 8px; font-size: 20px; }

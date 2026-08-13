@@ -35,7 +35,7 @@ test("server-renders the LEVITA promoter course", async () => {
   assert.match(html, /женский фитнес-клуб/);
   assert.match(html, /Шпаргалка PDF/);
   assert.match(html, /Соцопрос/);
-  assert.match(html, /Три способа заявки|Три способа оставить заявку/);
+  assert.match(html, /Четыре способа заявки|Четыре способа оставить заявку/);
   assert.doesNotMatch(html, /199\s*₽|(?<!бес)платное пробное/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
@@ -98,6 +98,7 @@ test("ships the downloadable PDF and course images", async () => {
     "../public/target-woman-45-real.jpg",
     "../public/target-woman-55-real.jpg",
     "../public/promoter-sms-qr.png",
+    "../public/max-bot-example.jpg",
     "../public/vk-bot-example.jpg",
     "../public/promoter-leaflet.png",
   ];
