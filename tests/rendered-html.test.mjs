@@ -35,7 +35,7 @@ test("server-renders the LEVITA promoter course", async () => {
   assert.match(html, /женский фитнес-клуб/);
   assert.match(html, /Шпаргалка PDF/);
   assert.match(html, /Соцопрос/);
-  assert.match(html, /VK-бот и листовка/);
+  assert.match(html, /Три способа заявки|Три способа оставить заявку/);
   assert.doesNotMatch(html, /199\s*₽|(?<!бес)платное пробное/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
@@ -46,14 +46,14 @@ test("keeps the business and test rules in the source", async () => {
   const end = page.indexOf("function shuffle");
   const testBlock = page.slice(start, end);
 
-  assert.equal((testBlock.match(/\bquestion:/g) ?? []).length, 38);
-  assert.equal((testBlock.match(/\bcorrect:/g) ?? []).length, 38);
+  assert.equal((testBlock.match(/\bquestion:/g) ?? []).length, 42);
+  assert.equal((testBlock.match(/\bcorrect:/g) ?? []).length, 42);
   assert.match(page, /30 - critical\.length/);
   assert.match(page, /score >= 27 && criticalPassed/);
   assert.match(page, /attemptsUsed >= 2/);
   assert.match(page, /randomizeQuestion/);
   assert.match(page, /Правильные ответы показываются только сейчас/);
-  assert.ok(page.includes("window.setInterval(() => move(1), 3000)"));
+  assert.ok(page.includes("window.setInterval(() => move(1), 5000)"));
   assert.match(page, /Выбери правильный ответ во всех ситуациях/);
   assert.match(page, /active === 6 && !difficultSituationsPassed/);
   assert.doesNotMatch(page, /className={`answer-explanation/);
@@ -95,6 +95,9 @@ test("ships the downloadable PDF and course images", async () => {
     "../public/client-portrait-3.jpg",
     "../public/target-woman-45.webp",
     "../public/target-woman-55.webp",
+    "../public/target-woman-45-new.png",
+    "../public/target-woman-55-new.png",
+    "../public/promoter-sms-qr.png",
     "../public/vk-bot-example.jpg",
     "../public/promoter-leaflet.png",
   ];

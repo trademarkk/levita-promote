@@ -233,6 +233,12 @@ mark {
 .benefit-grid article > span { color: #c49e2d; font-family: var(--font-ui); font-size: 11px; font-weight: 800; }
 .benefit-grid h3 { margin: 45px 0 8px; font-size: 21px; }
 .benefit-grid p { margin: 0; color: var(--ink-muted); font-size: 14px; line-height: 1.55; }
+.advantages-block { display: grid; grid-template-columns: .8fr 1.2fr; gap: 38px; margin-top: 18px; padding: clamp(25px, 4vw, 42px); border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--white); }
+.advantages-block h2 { margin: 10px 0 10px; font-size: clamp(28px, 3vw, 40px); line-height: 1.08; }
+.advantages-block p { margin: 0; color: var(--ink-muted); line-height: 1.5; }
+.advantages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.advantages-grid span { display: flex; align-items: flex-start; gap: 10px; padding: 16px; border-radius: var(--radius-control); background: var(--paper); color: var(--graphite); line-height: 1.4; }
+.advantages-grid span::before { content: "✓"; color: #9a7615; font-family: var(--font-ui); font-weight: 800; }
 
 .audience-carousel {
   min-height: 610px;
@@ -376,6 +382,15 @@ mark {
 .leaflet-decisions .yes strong { color: var(--gold); }
 .leaflet-decisions .no strong { color: #e0a7a7; }
 .leaflet-decisions span { color: rgba(255,255,255,.7); font-size: 13px; line-height: 1.45; }
+.lead-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 38px 0; }
+.lead-method { display: flex; flex-direction: column; gap: 13px; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--white); }
+.lead-method.featured { border-color: var(--gold); box-shadow: 0 12px 28px rgba(16,26,37,.08); }
+.lead-method h2 { margin: 0; font-size: 28px; line-height: 1.1; }
+.lead-method p { margin: 0; color: var(--ink-muted); font-size: 14px; line-height: 1.52; }
+.lead-method img { width: 100%; max-height: 320px; object-fit: contain; border-radius: var(--radius-control); background: var(--paper); }
+.lead-method small { margin-top: auto; color: var(--ink-muted); line-height: 1.45; }
+.studio-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; margin: 14px 0 0; padding: 0; list-style: none; }
+.studio-list li::before { content: "•"; margin-right: 7px; color: #9a7615; }
 .privacy-note { padding: 25px; border: 1px solid var(--gold); border-radius: var(--radius-card); background: var(--white); }
 .privacy-note strong { display: block; margin-bottom: 8px; font-size: 20px; }
 .privacy-note p { margin: 0; color: var(--ink-muted); line-height: 1.55; }
@@ -480,6 +495,7 @@ mark {
   .hero-visual { min-height: 520px; }
   .hero-visual > img { min-height: 520px; max-height: 620px; }
   .benefit-grid { grid-template-columns: 1fr 1fr; }
+  .advantages-block { grid-template-columns: 1fr; }
   .audience-carousel { grid-template-columns: .9fr 1fr; }
   .decision-rule { grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; }
   .decision-rule strong { grid-column: 1 / -1; min-height: 45px; }
@@ -513,11 +529,12 @@ mark {
   .content-section.narrow { min-height: auto; }
   .section-heading h1, .section-heading h2 { font-size: 41px; }
   .section-heading p { font-size: 16px; }
-  .benefit-grid, .audience-carousel, .target-practice, .works-block, .lead-definition, .bot-grid,
+  .benefit-grid, .audience-carousel, .target-practice, .works-block, .lead-definition, .bot-grid, .lead-methods,
   .leaflet-section, .leaflet-decisions, .pay-note, .safety-grid, .test-rules, .result-grid, .survey-decision { grid-template-columns: 1fr; }
   .audience-carousel { min-height: auto; }
   .audience-photo { min-height: 480px; }
   .audience-copy { padding: 32px 24px; }
+  .advantages-grid, .studio-list { grid-template-columns: 1fr; }
   .decision-rule { grid-template-columns: 1fr; }
   .decision-rule > * { min-height: auto; padding: 13px; }
   .decision-rule i { min-height: 24px; }
