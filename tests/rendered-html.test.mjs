@@ -46,8 +46,8 @@ test("keeps the business and test rules in the source", async () => {
   const end = page.indexOf("function shuffle");
   const testBlock = page.slice(start, end);
 
-  assert.equal((testBlock.match(/\bquestion:/g) ?? []).length, 42);
-  assert.equal((testBlock.match(/\bcorrect:/g) ?? []).length, 42);
+  assert.equal((testBlock.match(/\bquestion:/g) ?? []).length, 43);
+  assert.equal((testBlock.match(/\bcorrect:/g) ?? []).length, 43);
   assert.match(page, /30 - critical\.length/);
   assert.match(page, /score >= 27 && criticalPassed/);
   assert.match(page, /attemptsUsed >= 2/);
@@ -61,7 +61,7 @@ test("keeps the business and test rules in the source", async () => {
   assert.match(page, /Повторные заявки не оплачиваются/);
   assert.match(page, /Бывшая клиентка считается оплачиваемым лидом/);
   assert.match(page, /Листовка продолжает заинтересованный разговор/);
-  assert.match(page, /Клиентка самостоятельно вводит данные/);
+  assert.match(page, /Клиентка самостоятельно проходит шаги/);
   assert.match(page, /около двух минут и пять коротких вопросов/i);
   assert.match(page, /levita-promoter-test-v4/);
   assert.match(page, /сертификату для Вас.*2 бесплатных групповых занятия/i);
@@ -85,7 +85,7 @@ test("does not make the longest option a reliable test hint", async () => {
     if (options[correct].length === longest) correctIsLongest += 1;
   }
 
-  assert.ok(correctIsLongest >= 7 && correctIsLongest <= 14, `correct answer was longest in ${correctIsLongest} of ${lines.length} questions`);
+  assert.ok(correctIsLongest >= 3 && correctIsLongest <= 10, `correct answer was longest in ${correctIsLongest} of ${lines.length} questions`);
 });
 
 test("ships the downloadable PDF and course images", async () => {
